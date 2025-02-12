@@ -11,10 +11,57 @@
 </head>
 <body>
 
-    <h1>Memory Game</h1>
-    <div class="game-container" id="game-board"></div>
-    
-    <footer>
+    <div className="w-[1200px] bg-gradient-to-b from-purple-100 to-pink-100 min-h-screen font-sans">
+    <header className="py-8 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute h-8 w-8 bg-purple-300/30 rotate-45 top-10 left-1/4 animate-bounce" />
+            <div className="absolute h-10 w-10 bg-pink-300/30 rotate-45 top-20 left-1/2 animate-pulse" />
+            <div className="absolute h-6 w-6 bg-yellow-200/30 rotate-45 top-15 right-1/4 animate-bounce" />
+            <div className="absolute h-12 w-12 bg-purple-200/30 -rotate-12 bottom-10 left-1/3 animate-pulse" />
+            <div className="absolute h-8 w-8 bg-pink-200/30 rotate-12 top-32 right-1/3 animate-bounce" />
+        </div>
+        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+            Memory Game
+        </h1>
+    </header>
+
+    <main className="relative">
+        <div className="absolute w-full h-full">
+            <div className="absolute h-16 w-16 bg-purple-200/20 -rotate-12 top-20 left-20 animate-float" />
+            <div className="absolute h-20 w-20 bg-pink-200/20 rotate-45 bottom-40 right-40 animate-bounce" />
+            <div className="absolute h-14 w-14 bg-yellow-200/20 rotate-12 top-40 right-20 animate-pulse" />
+        </div>
+        <div className="grid grid-cols-4 gap-6 max-w-[480px] mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl relative">
+            {Array(16)
+                .fill()
+                .map((_, i) => (
+                    <div
+                        key={i}
+                        className="w-[100px] h-[100px] bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:rotate-3 cursor-pointer group"
+                    >
+                        <div className="w-full h-full flex items-center justify-center">
+                            <span className="text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                ✨
+                            </span>
+                        </div>
+                    </div>
+                ))}
+        </div>
+    </main>
+
+    <footer className="mt-12 p-8 bg-white/20 backdrop-blur-sm relative">
+        <div className="absolute w-full h-full">
+            <div className="absolute h-10 w-10 bg-purple-200/20 rotate-45 top-10 left-40 animate-bounce" />
+            <div className="absolute h-12 w-12 bg-pink-200/20 -rotate-12 bottom-10 right-60 animate-pulse" />
+        </div>
+        <p className="text-lg font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+            
+        </p>
+        <div className="w-full h-[100px] bg-white/40 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3124890716815520"
+     crossorigin="anonymous"></script>
+<!-- Memocards -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-3124890716815520"
@@ -24,10 +71,9 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-        
         </div>
     </footer>
-
+            </div>
     <script src="script.js"></script>
 </body>
 </html>
